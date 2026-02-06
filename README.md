@@ -1,13 +1,17 @@
-# Sample Hardhat Project
+# UrbanImprover 🏙️
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+## About the Project
+UrbanImprover is a simple app for city crowdfunding. People can collect money (test ETH) to make the city better. For example, to buy new benches, street lights, or playgrounds.
 
-Try running some of the following tasks:
+## How it works:
+1. **Create a Project:** A user creates a "campaign" (name, money goal, and time).
+2. **Help the City:** Other people send test ETH to help the project.
+3. **Get Rewards:** When you send ETH, the app automatically gives you **URB tokens**. 
+4. **Transparency:** All money and tokens are controlled by smart contracts. No one can steal the funds.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+## Tech Stack:
+* **Solidity:** For smart contracts.
+* **Hardhat:** For testing and deployment.
+* **JavaScript:** For the website and MetaMask connection.
+* **MetaMask:** To sign transactions.
+* **Sepolia:** Our test network.
