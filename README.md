@@ -1,4 +1,4 @@
-# UrbanImprover 🏙️
+# UrbanImprover 
 
 ## About the Project
 UrbanImprover is a simple app for city crowdfunding. People can collect money (test ETH) to make the city better. For example, to buy new benches, street lights, or playgrounds.
