@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UrbanImprover</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="logo">Urban<span>Improver</span></div>
+            <button id="connect-wallet" class="ios-btn-primary">Connect</button>
+        </header>
+
+        <div id="status-bar" class="hidden">
+            <span id="user-address"></span>
+            <span id="user-balance">0 URB</span>
+        </div>
+
+        <main>
+            <div class="ios-card">
+                <h3>Dashboard</h3>
+                <button onclick="loadCampaigns()" class="ios-btn-primary">Refresh Projects</button>
+                <div id="campaign-list" style="margin-top: 15px;"></div>
+            </div>
+
+            <div id="donate-modal" class="hidden">
+                <div class="ios-card modal-content">
+                    <h3 id="modal-title">Donate</h3>
+                    <input type="number" id="contribution-amount" placeholder="Amount (ETH)">
+                    <button onclick="contributeToCampaign()" class="ios-btn-reward">Confirm Donation</button>
+                    <button onclick="closeModal()" class="ios-btn" style="margin-top: 10px; background: none; color: white; opacity: 0.6;">Cancel</button>
+                </div>
+            </div>
+
+            <div class="ios-card">
+                <h3>Launch Project</h3>
+                <input type="text" id="cam-title" placeholder="Project Name">
+                <input type="number" id="cam-goal" placeholder="Goal (ETH)">
+                <input type="number" id="cam-duration" placeholder="Days">
+                <button onclick="createNewCampaign()" class="ios-btn">Create</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
