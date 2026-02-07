@@ -1,8 +1,11 @@
 {
   "name": "urbanimprover",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "UrbanImprover is a simple app for city crowdfunding. People can collect money to make the city better. For example, to buy new benches, street lights, or playgrounds.",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +22,10 @@
   },
   "homepage": "https://github.com/selnoron/UrbanImprover#readme",
   "devDependencies": {
-    "hardhat": "^3.1.7"
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
   }
 }
