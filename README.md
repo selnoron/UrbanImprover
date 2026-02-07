@@ -14,4 +14,4 @@ UrbanImprover is a simple app for city crowdfunding. People can collect money to
 * **Hardhat:** For testing and deployment.
 * **JavaScript:** For the website and MetaMask connection.
 * **MetaMask:** To sign transactions.
-* **Sepolia:** Our test network.
+* **Localhost:** Our test network.
