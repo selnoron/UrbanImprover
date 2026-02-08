@@ -23,14 +23,21 @@
                 <h3>Dashboard</h3>
                 <button onclick="loadCampaigns()" class="ios-btn-primary">Refresh Projects</button>
                 <div id="campaign-list" style="margin-top: 15px;"></div>
-            </div>
-
+            </div> 
+            
             <div id="donate-modal" class="hidden">
                 <div class="ios-card modal-content">
-                    <h3 id="modal-title">Donate</h3>
-                    <input type="number" id="contribution-amount" placeholder="Amount (ETH)">
-                    <button onclick="contributeToCampaign()" class="ios-btn-reward">Confirm Donation</button>
-                    <button onclick="closeModal()" class="ios-btn" style="margin-top: 10px; background: none; color: white; opacity: 0.6;">Cancel</button>
+                    <h3 id="modal-title">Project</h3>
+                    <p id="modal-info" style="font-size: 14px; opacity: 0.7; margin-bottom: 15px;"></p>
+                    
+                    <div id="donate-inputs">
+                        <input type="number" id="contribution-amount" placeholder="Amount (ETH)">
+                        <button onclick="contributeToCampaign()" class="ios-btn-reward">Confirm Donation</button>
+                    </div>
+
+                    <button id="claim-btn" onclick="withdrawFunds()" class="ios-btn-primary hidden" style="margin-top: 10px; background: #FF9500;">Claim Funds</button>
+                    
+                    <button onclick="closeModal()" class="ios-btn" style="margin-top: 10px; background: none; color: white; opacity: 0.6;">Close</button>
                 </div>
             </div>
 

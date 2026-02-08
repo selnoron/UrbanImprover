@@ -56,4 +56,14 @@ contract UrbanImprover {
             payable(campaign.creator).transfer(campaign.currentAmount);
         }
     }
+    
+    function withdrawFunds(uint256 id) external {
+        Campaign storage campaign = campaigns[id];
+        require(msg.sender == campaign.creator, "Only creator can withdraw");
+        require(campaign.currentAmount >= campaign.goal, "Goal not reached");
+        require(!campaign.completed, "Already withdrawn");
+
+        campaign.completed = true;
+        payable(campaign.creator).transfer(campaign.currentAmount);
+    }
 }
